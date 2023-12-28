@@ -1,0 +1,252 @@
+// colors
+
+$black: hsl(0, 0%, 8%);
+$neonGreen: hsl(153, 71%, 59%);
+$greyishBlack: hsl(0, 0%, 14%);
+$grey: hsl(0, 0%, 85%);
+$white: hsl(0, 0%, 100%);
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+@mixin details {
+    .info {
+        h4 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .tech {
+            font-size: 1.125rem;
+            color: $grey;
+            .tech2, .tech3 {
+                padding-left: 0.75rem;
+            }
+        }
+        .links {
+            padding-top: 1rem;
+        }
+        .project, .code {
+            text-transform: uppercase;
+            text-decoration: underline solid $neonGreen .125rem;
+            color: $white;
+            font-size: 1rem;
+            text-underline-offset: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.15rem;
+        }
+        .code{
+            padding-left: .75rem;
+        }
+    }
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    .hero-content {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+    }
+
+    .hero-content, .profile{
+        grid-area: 1/2;
+    }
+    .nav-bar {
+        .name-logo {
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .socials {
+            text-align: center;
+            img {
+                padding: 0 0.75rem
+            }
+        }
+    }
+    .profile {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 60%;
+    }
+}
+
+.introduction {
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        .name{
+            text-decoration: underline $neonGreen solid;
+            text-decoration-thickness: 0.25rem;
+            text-decoration-skip-ink: none;
+        }
+    }
+    p {
+        color: $grey;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.625rem;
+        padding: 0 1rem;
+    }
+    .button-contact {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: underline solid $neonGreen .125rem;
+        letter-spacing: .15rem;
+        text-underline-offset: 1rem;
+    }
+}
+
+.line {
+    border-bottom: 1px solid $white;
+    margin: 5rem auto 2rem;
+    width: 95%;
+}
+
+.experience {
+    text-align: center;
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 0;
+        line-height: 2.5rem;
+    }
+    p {
+        margin-top: 0;
+        font-weight: 500;
+        line-height: 1.625rem;
+        color: $grey;
+        font-size: 1rem;
+    }
+}
+
+.projects {
+    padding: 0 1rem;
+    .projects-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 2rem;
+        h4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .button-contact {
+            margin: auto 0 auto auto;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: underline solid $neonGreen .125rem;
+            letter-spacing: .15rem;
+            text-underline-offset: 1rem;
+        }
+    }
+    .projects-div {
+        display: grid;
+        grid-template-rows: repeat(6, auto);
+        img {
+            box-sizing:border-box;
+            max-width: 100%;
+        }
+    }
+    .design-portfolio, 
+    .e-learning-page, 
+    .todo-app, .entertainment-app, .memory-game, .art-gallery  {
+        padding-bottom: 3.25rem;
+        @include details();
+    }
+}
+
+.footer {
+    background: $greyishBlack;
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        text-align: center;
+        margin: 0;
+        padding: 3.75rem 0 1.25rem;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        text-align: center;
+        color: $grey;
+        padding: 0 1rem;
+    }
+    .footer-socials {
+        text-align: center;
+        .name-logo {
+            font-size: 1.5rem;
+            padding-bottom: 1.25rem;
+        }
+        .socials {
+            padding-bottom: 6.25rem;
+            img {
+                padding: 0 0.75rem
+            }
+        }
+    }
+}
+
+.form {
+    padding-top: .85rem;
+    // border-bottom: 1px solid $white;
+
+    .input-field {
+        padding: 1rem 0;
+        text-align: center;
+    }
+    input {
+        background-color: $greyishBlack;
+        padding: 0.75rem;
+        width: 90%;
+        box-sizing: border-box;
+        color: $white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border: none;
+        border-bottom: 1px solid $white;
+    }
+
+    textarea {
+        width: 90%;
+        background-color: $greyishBlack;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 0.75rem;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid $white;
+    }
+
+    .submit {
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: $white;
+        background: none;
+        border: none;
+        text-decoration: underline solid $neonGreen .125rem;
+        text-underline-offset: 1rem;
+        padding: .75rem;
+        letter-spacing: .15rem;
+        display: block;
+        margin: 0 1rem 0 auto;
+    }
+}
+

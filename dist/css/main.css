@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+}
+.hero .hero-content, .hero .profile {
+  grid-area: 1/2;
+}
+.hero .nav-bar .name-logo {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.hero .nav-bar .socials {
+  text-align: center;
+}
+.hero .nav-bar .socials img {
+  padding: 0 0.75rem;
+}
+.hero .profile {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 60%;
+}
+
+.introduction h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.introduction h1 .name {
+  -webkit-text-decoration: underline hsl(153, 71%, 59%) solid;
+          text-decoration: underline hsl(153, 71%, 59%) solid;
+  text-decoration-thickness: 0.25rem;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.introduction p {
+  color: hsl(0, 0%, 85%);
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.625rem;
+  padding: 0 1rem;
+}
+.introduction .button-contact {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+          text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+  letter-spacing: 0.15rem;
+  text-underline-offset: 1rem;
+}
+
+.line {
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  margin: 5rem auto 2rem;
+  width: 95%;
+}
+
+.experience {
+  text-align: center;
+}
+.experience h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0;
+  line-height: 2.5rem;
+}
+.experience p {
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: hsl(0, 0%, 85%);
+  font-size: 1rem;
+}
+
+.projects {
+  padding: 0 1rem;
+}
+.projects .projects-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 2rem;
+}
+.projects .projects-nav h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.projects .projects-nav .button-contact {
+  margin: auto 0 auto auto;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+          text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+  letter-spacing: 0.15rem;
+  text-underline-offset: 1rem;
+}
+.projects .projects-div {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+}
+.projects .projects-div img {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.projects .design-portfolio,
+.projects .e-learning-page,
+.projects .todo-app, .projects .entertainment-app, .projects .memory-game, .projects .art-gallery {
+  padding-bottom: 3.25rem;
+}
+.projects .design-portfolio .info h4,
+.projects .e-learning-page .info h4,
+.projects .todo-app .info h4, .projects .entertainment-app .info h4, .projects .memory-game .info h4, .projects .art-gallery .info h4 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.projects .design-portfolio .info .tech,
+.projects .e-learning-page .info .tech,
+.projects .todo-app .info .tech, .projects .entertainment-app .info .tech, .projects .memory-game .info .tech, .projects .art-gallery .info .tech {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 85%);
+}
+.projects .design-portfolio .info .tech .tech2, .projects .design-portfolio .info .tech .tech3,
+.projects .e-learning-page .info .tech .tech2,
+.projects .e-learning-page .info .tech .tech3,
+.projects .todo-app .info .tech .tech2,
+.projects .todo-app .info .tech .tech3, .projects .entertainment-app .info .tech .tech2, .projects .entertainment-app .info .tech .tech3, .projects .memory-game .info .tech .tech2, .projects .memory-game .info .tech .tech3, .projects .art-gallery .info .tech .tech2, .projects .art-gallery .info .tech .tech3 {
+  padding-left: 0.75rem;
+}
+.projects .design-portfolio .info .links,
+.projects .e-learning-page .info .links,
+.projects .todo-app .info .links, .projects .entertainment-app .info .links, .projects .memory-game .info .links, .projects .art-gallery .info .links {
+  padding-top: 1rem;
+}
+.projects .design-portfolio .info .project, .projects .design-portfolio .info .code,
+.projects .e-learning-page .info .project,
+.projects .e-learning-page .info .code,
+.projects .todo-app .info .project,
+.projects .todo-app .info .code, .projects .entertainment-app .info .project, .projects .entertainment-app .info .code, .projects .memory-game .info .project, .projects .memory-game .info .code, .projects .art-gallery .info .project, .projects .art-gallery .info .code {
+  text-transform: uppercase;
+  -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+          text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  text-underline-offset: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+.projects .design-portfolio .info .code,
+.projects .e-learning-page .info .code,
+.projects .todo-app .info .code, .projects .entertainment-app .info .code, .projects .memory-game .info .code, .projects .art-gallery .info .code {
+  padding-left: 0.75rem;
+}
+
+.footer {
+  background: hsl(0, 0%, 14%);
+}
+.footer h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 3.75rem 0 1.25rem;
+}
+.footer p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: hsl(0, 0%, 85%);
+  padding: 0 1rem;
+}
+.footer .footer-socials {
+  text-align: center;
+}
+.footer .footer-socials .name-logo {
+  font-size: 1.5rem;
+  padding-bottom: 1.25rem;
+}
+.footer .footer-socials .socials {
+  padding-bottom: 6.25rem;
+}
+.footer .footer-socials .socials img {
+  padding: 0 0.75rem;
+}
+
+.form {
+  padding-top: 0.85rem;
+}
+.form .input-field {
+  padding: 1rem 0;
+  text-align: center;
+}
+.form input {
+  background-color: hsl(0, 0%, 14%);
+  padding: 0.75rem;
+  width: 90%;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+.form textarea {
+  width: 90%;
+  background-color: hsl(0, 0%, 14%);
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+.form .submit {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+          text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+  text-underline-offset: 1rem;
+  padding: 0.75rem;
+  letter-spacing: 0.15rem;
+  display: block;
+  margin: 0 1rem 0 auto;
+}/*# sourceMappingURL=main.css.map */
