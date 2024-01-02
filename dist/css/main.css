@@ -5,31 +5,55 @@ body {
   font-family: "Space Grotesk", sans-serif;
   margin: 0;
 }
+body .tablet {
+  display: none !important;
+}
+body .desktop {
+  display: none !important;
+}
 
 .hero {
   position: relative;
   display: grid;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 }
-.hero .hero-content, .hero .profile {
-  grid-area: 1/2;
+.hero .nav-bar,
+.hero .profiles {
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 .hero .nav-bar .name-logo {
   padding-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+  filter: brightness(5);
 }
 .hero .nav-bar .socials {
   text-align: center;
 }
 .hero .nav-bar .socials img {
   padding: 0 0.75rem;
+  filter: brightness(5);
 }
 .hero .profile {
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 60%;
+}
+.hero .circle {
+  position: absolute;
+  top: 349px;
+  left: 325px;
+}
+.hero .rings {
+  position: absolute;
+  top: 160px;
+  right: 200px;
+  z-index: -1;
 }
 
 .introduction h1 {
@@ -56,16 +80,17 @@ body {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.15rem;
   -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
           text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
-  letter-spacing: 0.15rem;
   text-underline-offset: 1rem;
+  height: 50px;
 }
 
 .line {
   border-bottom: 1px solid hsl(0, 0%, 100%);
   margin: 5rem auto 2rem;
-  width: 95%;
+  width: 90%;
 }
 
 .experience {
@@ -145,7 +170,7 @@ body {
 .projects .design-portfolio .info .links,
 .projects .e-learning-page .info .links,
 .projects .todo-app .info .links, .projects .entertainment-app .info .links, .projects .memory-game .info .links, .projects .art-gallery .info .links {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 .projects .design-portfolio .info .project, .projects .design-portfolio .info .code,
 .projects .e-learning-page .info .project,
@@ -161,6 +186,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.15rem;
 }
+.projects .design-portfolio .info .project a, .projects .design-portfolio .info .code a,
+.projects .e-learning-page .info .project a,
+.projects .e-learning-page .info .code a,
+.projects .todo-app .info .project a,
+.projects .todo-app .info .code a, .projects .entertainment-app .info .project a, .projects .entertainment-app .info .code a, .projects .memory-game .info .project a, .projects .memory-game .info .code a, .projects .art-gallery .info .project a, .projects .art-gallery .info .code a {
+  font-size: 1rem;
+}
 .projects .design-portfolio .info .code,
 .projects .e-learning-page .info .code,
 .projects .todo-app .info .code, .projects .entertainment-app .info .code, .projects .memory-game .info .code, .projects .art-gallery .info .code {
@@ -169,6 +201,14 @@ body {
 
 .footer {
   background: hsl(0, 0%, 14%);
+}
+.footer .contact {
+  position: relative;
+}
+.footer .contact .rings {
+  position: absolute;
+  top: 520px;
+  right: 200px;
 }
 .footer h3 {
   font-size: 2.5rem;
@@ -191,6 +231,7 @@ body {
 .footer .footer-socials .name-logo {
   font-size: 1.5rem;
   padding-bottom: 1.25rem;
+  margin: 0;
 }
 .footer .footer-socials .socials {
   padding-bottom: 6.25rem;
@@ -236,8 +277,67 @@ body {
   -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
           text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
   text-underline-offset: 1rem;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   letter-spacing: 0.15rem;
   display: block;
-  margin: 0 1rem 0 auto;
+  margin: 0 0rem 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  body .mobile,
+  body .desktop {
+    display: none !important;
+  }
+  body .tablet {
+    display: block !important;
+  }
+  .hero {
+    grid-template-areas: "nav nav" "intro profile";
+  }
+  .hero .profiles {
+    grid-area: profile;
+    grid-row-start: 1;
+  }
+  .hero .profiles img {
+    width: 100%;
+    margin: 0;
+  }
+  .hero .introduction {
+    grid-area: intro;
+    grid-column-end: 3;
+  }
+  .hero .introduction h1 {
+    font-size: 4.5rem;
+    width: 58%;
+    padding-right: 1rem;
+  }
+  .hero .introduction p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: left;
+    width: 50%;
+  }
+  .hero .introduction .button-contact {
+    text-align: left;
+    margin-left: 1rem;
+  }
+  .hero .nav-bar {
+    grid-area: nav;
+  }
+  .nav-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+  .nav-bar .name-logo {
+    margin: 0;
+    text-align: left;
+    padding-top: 0 !important;
+    margin-right: auto;
+  }
+  .nav-bar .socials {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

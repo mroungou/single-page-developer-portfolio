@@ -25,7 +25,7 @@ $white: hsl(0, 0%, 100%);
             }
         }
         .links {
-            padding-top: 1rem;
+            padding-top: 1.5rem;
         }
         .project, .code {
             text-transform: uppercase;
@@ -35,6 +35,9 @@ $white: hsl(0, 0%, 100%);
             text-underline-offset: 1rem;
             font-weight: 700;
             letter-spacing: 0.15rem;
+            a {
+                font-size: 1rem;
+            }
         }
         .code{
             padding-left: .75rem;
@@ -47,19 +50,24 @@ body {
     color: $white;
     font-family: 'Space Grotesk', sans-serif;
     margin: 0;
+    .tablet {
+        display: none !important;
+    }
+    .desktop {
+        display: none !important;
+    }
 }
 
 .hero {
     position: relative;
     display: grid;
-    .hero-content {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: flex-end;
-    }
-
-    .hero-content, .profile{
-        grid-area: 1/2;
+    box-sizing:border-box;
+    max-width: 100%;
+    overflow: hidden;
+    .nav-bar, 
+    .profiles{
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
     .nav-bar {
         .name-logo {
@@ -67,11 +75,13 @@ body {
             text-align: center;
             font-size: 1.5rem;
             font-weight: 700;
+            filter: brightness(5);
         }
         .socials {
             text-align: center;
             img {
-                padding: 0 0.75rem
+                padding: 0 0.75rem;
+                filter: brightness(5);
             }
         }
     }
@@ -80,6 +90,17 @@ body {
         margin-right: auto;
         display: block;
         width: 60%;
+    }
+    .circle {
+        position: absolute;
+        top: 349px;
+        left: 325px;
+    }
+    .rings {
+        position: absolute;
+        top: 160px;
+        right: 200px;
+        z-index: -1;
     }
 }
 
@@ -106,16 +127,17 @@ body {
         font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
-        text-decoration: underline solid $neonGreen .125rem;
         letter-spacing: .15rem;
+        text-decoration: underline solid $neonGreen .125rem;
         text-underline-offset: 1rem;
+        height: 50px;
     }
 }
 
 .line {
     border-bottom: 1px solid $white;
     margin: 5rem auto 2rem;
-    width: 95%;
+    width: 90%;
 }
 
 .experience {
@@ -173,6 +195,14 @@ body {
 }
 
 .footer {
+    .contact {
+        position: relative;
+        .rings {
+            position: absolute;
+            top: 520px;
+            right: 200px;
+        }
+    }
     background: $greyishBlack;
     h3 {
         font-size: 2.5rem;
@@ -194,6 +224,7 @@ body {
         .name-logo {
             font-size: 1.5rem;
             padding-bottom: 1.25rem;
+            margin: 0;
         }
         .socials {
             padding-bottom: 6.25rem;
@@ -243,10 +274,77 @@ body {
         border: none;
         text-decoration: underline solid $neonGreen .125rem;
         text-underline-offset: 1rem;
-        padding: .75rem;
+        padding: .75rem 1rem;
         letter-spacing: .15rem;
         display: block;
-        margin: 0 1rem 0 auto;
+        margin: 0 0rem 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        .mobile, 
+        .desktop {
+            display: none !important;
+        }
+        .tablet {
+            display: block !important;
+        }
+    }
+
+    .hero {
+        grid-template-areas: "nav nav"
+                            "intro profile";
+
+        .profiles {
+            grid-area: profile;
+            grid-row-start: 1;
+            img {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        .introduction {
+            grid-area: intro;
+            grid-column-end: 3;
+            h1 {
+                font-size: 4.5rem;
+                width: 58%;
+                padding-right: 1rem;
+            }
+            p {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                text-align: left;
+                width: 50%;
+            }
+            .button-contact {
+                text-align: left;
+                margin-left: 1rem;
+            }
+        }
+        .nav-bar {
+            grid-area: nav;
+        }
+    }
+
+
+    .nav-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+
+        .name-logo {
+            margin: 0;
+            text-align: left;
+            padding-top: 0 !important;
+            margin-right: auto;
+        }
+        .socials {
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+        }
     }
 }
 
