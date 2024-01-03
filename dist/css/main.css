@@ -158,6 +158,7 @@ body .desktop {
 .projects .e-learning-page .info .tech,
 .projects .todo-app .info .tech, .projects .entertainment-app .info .tech, .projects .memory-game .info .tech, .projects .art-gallery .info .tech {
   font-size: 1.125rem;
+  text-transform: uppercase;
   color: hsl(0, 0%, 85%);
 }
 .projects .design-portfolio .info .tech .tech2, .projects .design-portfolio .info .tech .tech3,
@@ -196,7 +197,7 @@ body .desktop {
 .projects .design-portfolio .info .code,
 .projects .e-learning-page .info .code,
 .projects .todo-app .info .code, .projects .entertainment-app .info .code, .projects .memory-game .info .code, .projects .art-gallery .info .code {
-  padding-left: 0.75rem;
+  padding-left: 2rem;
 }
 
 .footer {
@@ -293,6 +294,7 @@ body .desktop {
   }
   .hero {
     grid-template-areas: "nav nav" "intro profile";
+    grid-template-columns: 2fr 1.5fr;
   }
   .hero .profiles {
     grid-area: profile;
@@ -304,12 +306,14 @@ body .desktop {
   }
   .hero .introduction {
     grid-area: intro;
-    grid-column-end: 3;
+    grid-column: 1/3;
   }
   .hero .introduction h1 {
-    font-size: 4.5rem;
-    width: 58%;
-    padding-right: 1rem;
+    font-size: 5rem;
+    width: 55%;
+    padding: 0 1rem;
+    text-align: left;
+    line-height: 4.5rem;
   }
   .hero .introduction p {
     font-size: 1.125rem;
@@ -339,5 +343,55 @@ body .desktop {
     justify-content: center;
     align-items: center;
     margin-left: auto;
+  }
+  .experience {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    text-align: left;
+    padding: 0 2.5rem;
+  }
+  .experience h2 {
+    font-size: 3rem;
+  }
+  .experience p {
+    padding-top: 1rem;
+    font-size: 1.125rem;
+  }
+  .projects {
+    padding: 0 2.5rem;
+  }
+  .projects .projects-nav h4 {
+    font-size: 4.5rem !important;
+  }
+  .projects .projects-div {
+    grid-template-columns: repeat(2, auto);
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .projects .projects-div .tech {
+    padding-top: 0.25rem;
+  }
+  .footer .contact {
+    padding: 3rem 9rem;
+  }
+  .footer .contact h3 {
+    font-size: 4.5rem;
+  }
+  .footer .contact p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .footer-socials {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 0 2rem;
+  }
+  .footer-socials .logo {
+    margin-right: auto;
+  }
+  .footer-socials .socials {
+    margin-left: auto;
+    padding-bottom: 2rem !important;
   }
 }/*# sourceMappingURL=main.css.map */
