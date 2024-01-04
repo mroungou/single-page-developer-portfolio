@@ -248,7 +248,7 @@ body .desktop {
   padding: 1rem 0;
   text-align: center;
 }
-.form input {
+.form input, .form input:focus, .form input:hover {
   background-color: hsl(0, 0%, 14%);
   padding: 0.75rem;
   width: 90%;
@@ -259,7 +259,7 @@ body .desktop {
   border: none;
   border-bottom: 1px solid hsl(0, 0%, 100%);
 }
-.form textarea {
+.form textarea, .form textarea:focus, .form textarea:hover {
   width: 90%;
   background-color: hsl(0, 0%, 14%);
   text-transform: uppercase;
@@ -405,5 +405,86 @@ body .desktop {
   .footer-socials .socials {
     margin-left: auto;
     padding-bottom: 2rem !important;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .mobile,
+  body .tablet {
+    display: none !important;
+  }
+  body .desktop {
+    display: block !important;
+  }
+  .main {
+    padding: 0 6rem;
+  }
+  .introduction,
+  .nav-bar {
+    padding: 0;
+  }
+  .nav-bar {
+    padding-top: 2rem;
+  }
+  .nav-bar .name-logo {
+    font-size: 2rem !important;
+  }
+  .hero .rings {
+    top: 245px;
+    left: -240px;
+  }
+  .hero .circle {
+    top: 620px;
+    left: 645px;
+  }
+  .introduction {
+    padding: 0 !important;
+  }
+  .introduction h1 {
+    font-size: 5.5rem !important;
+  }
+  .introduction p {
+    font-size: 1.125rem !important;
+    width: 35% !important;
+  }
+  .line {
+    width: 100%;
+  }
+  .experience {
+    grid-template-columns: repeat(3, auto);
+    padding: 0 0;
+  }
+  .projects {
+    padding: 0;
+  }
+  .projects .projects-nav h4 {
+    font-size: 5.5rem !important;
+  }
+  .footer .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 5rem;
+  }
+  .footer .contact h3 {
+    font-size: 5.5rem;
+    text-align: left;
+  }
+  .footer .contact p {
+    text-align: left;
+    padding: 0;
+    width: 70%;
+    line-height: 1.75rem;
+  }
+  .footer .footer-socials {
+    padding: 2rem 4.5rem 5rem;
+  }
+  .footer .footer-socials h4 {
+    font-size: 2rem !important;
+  }
+  .footer .line {
+    width: 90%;
+  }
+  .footer .rings {
+    top: 400px !important;
+    left: -290px;
   }
 }/*# sourceMappingURL=main.css.map */

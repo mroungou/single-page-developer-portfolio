@@ -251,7 +251,7 @@ body {
         padding: 1rem 0;
         text-align: center;
     }
-    input {
+    input, input:focus, input:hover {
         background-color: $greyishBlack;
         padding: 0.75rem;
         width: 90%;
@@ -263,7 +263,7 @@ body {
         border-bottom: 1px solid $white;
     }
 
-    textarea {
+    textarea, textarea:focus, textarea:hover {
         width: 90%;
         background-color: $greyishBlack;
         text-transform: uppercase;
@@ -289,6 +289,11 @@ body {
     }
 }
 
+
+
+
+// tablet
+
 @media screen and (min-width: 768px) {
     body {
         .mobile, 
@@ -299,10 +304,10 @@ body {
             display: block !important;
         }
     }
-
+    
     .hero {
         grid-template-areas: "nav nav"
-                            "intro profile";
+        "intro profile";
         grid-template-columns: 2fr 1.5fr;
 
         .profiles {
@@ -347,13 +352,13 @@ body {
             right: 490px;
         }
     }
-
-
+    
+    
     .nav-bar {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem;
-
+        
         .name-logo {
             margin: 0;
             text-align: left;
@@ -366,7 +371,7 @@ body {
             margin-left: auto;
         }
     }
-
+    
     .experience {
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -380,7 +385,7 @@ body {
             font-size: 1.125rem;
         }
     }
-
+    
     .projects {
         padding: 0 2.5rem;
         .projects-nav {
@@ -426,4 +431,101 @@ body {
         }
     }
 }
+
+// desktop 
+
+@media screen and (min-width: 1440px) {
+    body {
+        .mobile, 
+        .tablet {
+            display: none !important;
+        }
+        .desktop {
+            display: block !important;
+        }
+    }
+
+    .main {
+        padding: 0 6rem;
+    }
+    .introduction, 
+    .nav-bar {
+        padding: 0 ;
+    }
+    .nav-bar {
+        padding-top: 2rem;
+        .name-logo {
+            font-size: 2rem !important;
+        }
+    }
+    .hero {
+        .rings {
+            top: 245px;
+            left: -240px;
+        }
+        .circle {
+            top: 620px;
+            left: 645px;
+        }
+    }
+    .introduction {
+        padding: 0 !important;
+        h1 {
+            font-size: 5.5rem !important;
+        }
+        p {
+            font-size: 1.125rem !important;
+            width: 35% !important;
+        }
+    }
+    .line {
+        width: 100%;
+    }
+
+    .experience {
+        grid-template-columns: repeat(3, auto);
+        padding: 0 0;
+    }
+
+    .projects {
+        padding: 0;
+        .projects-nav {
+            h4 {
+                font-size: 5.5rem !important;
+            }
+        }
+    }
+
+    .footer {
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 3rem 5rem;
+            h3 {
+                font-size: 5.5rem;
+                text-align: left;
+            }
+            p {
+                text-align: left;
+                padding: 0;
+                width: 70%;
+                line-height: 1.75rem;
+            }
+        }
+        .footer-socials {
+            padding: 2rem 4.5rem 5rem;
+            h4 {
+                font-size: 2rem !important;
+            }
+        }
+        .line {
+            width: 90%;
+        }
+        .rings {
+            top: 400px !important;
+            left: -290px;
+        }
+    }
+}
+
 
