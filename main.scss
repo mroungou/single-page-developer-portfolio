@@ -101,7 +101,7 @@ body {
     }
     .circle {
         position: absolute;
-        top: 349px;
+        top: 368px;
         left: 325px;
     }
     .rings {
@@ -145,7 +145,7 @@ body {
 .line {
     border-bottom: 1px solid $white;
     margin: 5rem auto 2rem;
-    width: 90%;
+    width: 93%;
 }
 
 .experience {
@@ -316,26 +316,35 @@ body {
         .introduction {
             grid-area: intro;
             grid-column: 1/3;
+            padding-left: 2rem;
             h1 {
-                font-size: 5rem;
-                width: 55%;
-                padding: 0 1rem;
+                font-size: 4.5rem;
+                width: 64%;
+                // padding: 0 1rem;
                 text-align: left;
                 line-height: 4.5rem;
             }
             p {
-                font-size: 1.125rem;
+                font-size: 1.11rem;
                 line-height: 1.75rem;
                 text-align: left;
-                width: 50%;
+                width: 58%;
+                padding: 0;
             }
             .button-contact {
                 text-align: left;
-                margin-left: 1rem;
             }
         }
         .nav-bar {
             grid-area: nav;
+        }
+        .circle {
+            top: 484px;
+            left: 700px;
+        }
+        .rings {
+            top: 100px;
+            right: 490px;
         }
     }
 
@@ -398,6 +407,10 @@ body {
                 line-height: 1.75rem;
             }
             padding: 3rem 9rem;
+            .rings {
+                top: 675px;
+                right: 610px;
+            }
         }
     }
     .footer-socials {
