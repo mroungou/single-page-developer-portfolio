@@ -5,6 +5,7 @@ $neonGreen: hsl(153, 71%, 59%);
 $greyishBlack: hsl(0, 0%, 14%);
 $grey: hsl(0, 0%, 85%);
 $white: hsl(0, 0%, 100%);
+$red: hsla(7, 100%, 68%, 1);
 
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
@@ -139,6 +140,11 @@ body {
         text-decoration: underline solid $neonGreen .125rem;
         text-underline-offset: 1rem;
         height: 50px;
+        &:hover {
+            cursor: pointer;
+            color: $neonGreen;
+            transition: .25s;
+        }
     }
 }
 
@@ -184,6 +190,11 @@ body {
             text-decoration: underline solid $neonGreen .125rem;
             letter-spacing: .15rem;
             text-underline-offset: 1rem;
+            &:hover {
+                cursor: pointer;
+                color: $neonGreen;
+                transition: .25s;
+            }
         }
     }
     .projects-div {
@@ -239,6 +250,10 @@ body {
             img {
                 padding: 0 0.75rem
             }
+            img:hover{
+                cursor: pointer;
+                transition: .25s;
+            }
         }
     }
 }
@@ -286,6 +301,11 @@ body {
         letter-spacing: .15rem;
         display: block;
         margin: 0 0rem 0 auto;
+        &:hover {
+            cursor: pointer;
+            color: $neonGreen;
+            transition: .25s;
+        }
     }
 }
 
@@ -526,6 +546,10 @@ body {
             left: -290px;
         }
     }
+}
+
+.has-error input{
+    border-bottom: 2px solid hsla(7, 100%, 68%, 1) !important;
 }
 
 

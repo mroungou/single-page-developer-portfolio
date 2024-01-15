@@ -86,6 +86,11 @@ body .desktop {
   text-underline-offset: 1rem;
   height: 50px;
 }
+.introduction .button-contact:hover {
+  cursor: pointer;
+  color: hsl(153, 71%, 59%);
+  transition: 0.25s;
+}
 
 .line {
   border-bottom: 1px solid hsl(0, 0%, 100%);
@@ -132,6 +137,11 @@ body .desktop {
           text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
   letter-spacing: 0.15rem;
   text-underline-offset: 1rem;
+}
+.projects .projects-nav .button-contact:hover {
+  cursor: pointer;
+  color: hsl(153, 71%, 59%);
+  transition: 0.25s;
 }
 .projects .projects-div {
   display: grid;
@@ -240,6 +250,10 @@ body .desktop {
 .footer .footer-socials .socials img {
   padding: 0 0.75rem;
 }
+.footer .footer-socials .socials img:hover {
+  cursor: pointer;
+  transition: 0.25s;
+}
 
 .form {
   padding-top: 0.85rem;
@@ -282,6 +296,11 @@ body .desktop {
   letter-spacing: 0.15rem;
   display: block;
   margin: 0 0rem 0 auto;
+}
+.form .submit:hover {
+  cursor: pointer;
+  color: hsl(153, 71%, 59%);
+  transition: 0.25s;
 }
 
 @media screen and (min-width: 768px) {
@@ -487,4 +506,7 @@ body .desktop {
     top: 400px !important;
     left: -290px;
   }
+}
+.has-error input {
+  border-bottom: 2px solid hsl(7, 100%, 68%) !important;
 }/*# sourceMappingURL=main.css.map */
