@@ -265,6 +265,9 @@ body {
     .input-field {
         padding: 1rem 0;
         text-align: center;
+        .error-icon {
+            display: none;
+        }
     }
     input, input:focus, input:hover {
         background-color: $greyishBlack;
@@ -548,8 +551,34 @@ body {
     }
 }
 
-.has-error input{
-    border-bottom: 2px solid hsla(7, 100%, 68%, 1) !important;
+.has-error {
+    .input-field {
+        position: absolute;
+    }
+    .error {
+        padding-top: .5rem;
+        color: hsla(7, 100%, 68%, 1);
+        font-size: 0.75rem;
+        width: 95%;
+        text-align: right;
+
+    }
+    input {
+        border-bottom: 2px solid hsla(7, 100%, 68%, 1) !important;
+    }
+    .error-icon {
+        position: absolute;
+        right: 169px;
+        display: block !important;
+        top: 400px;
+    }
 }
 
-
+.no-error {
+    .error {
+        display: none;
+    }
+    input {
+        border-bottom: 2px solid $neonGreen !important;
+    }
+}

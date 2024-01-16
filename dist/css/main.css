@@ -262,6 +262,9 @@ body .desktop {
   padding: 1rem 0;
   text-align: center;
 }
+.form .input-field .error-icon {
+  display: none;
+}
 .form input, .form input:focus, .form input:hover {
   background-color: hsl(0, 0%, 14%);
   padding: 0.75rem;
@@ -507,6 +510,29 @@ body .desktop {
     left: -290px;
   }
 }
+.has-error .input-field {
+  position: absolute;
+}
+.has-error .error {
+  padding-top: 0.5rem;
+  color: hsl(7, 100%, 68%);
+  font-size: 0.75rem;
+  width: 95%;
+  text-align: right;
+}
 .has-error input {
   border-bottom: 2px solid hsl(7, 100%, 68%) !important;
+}
+.has-error .error-icon {
+  position: absolute;
+  right: 169px;
+  display: block !important;
+  top: 400px;
+}
+
+.no-error .error {
+  display: none;
+}
+.no-error input {
+  border-bottom: 2px solid hsl(153, 71%, 59%) !important;
 }/*# sourceMappingURL=main.css.map */
