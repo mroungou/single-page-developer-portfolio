@@ -194,6 +194,7 @@ body .desktop {
 .projects .e-learning-page .info .links,
 .projects .todo-app .info .links, .projects .entertainment-app .info .links, .projects .memory-game .info .links, .projects .art-gallery .info .links {
   padding-top: 1.5rem;
+  display: block;
 }
 .projects .design-portfolio .info .project, .projects .design-portfolio .info .code,
 .projects .e-learning-page .info .project,
@@ -540,4 +541,50 @@ body .desktop {
 }
 .no-error input {
   border-bottom: 2px solid hsl(153, 71%, 59%) !important;
+}
+
+.content {
+  position: relative;
+}
+.content:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links1 {
+  display: grid;
+  row-gap: 6rem;
+}
+.links1 a, .links1 a:visited {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  -webkit-text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+          text-decoration: underline solid hsl(153, 71%, 59%) 0.125rem;
+  text-underline-offset: 1rem;
+}
+.links1 a:hover {
+  color: hsl(153, 71%, 59%);
+  transition: 0.5s;
+}
+
+.content:hover .overlay {
+  opacity: 1;
+}
+
+.content:hover .info .links {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
